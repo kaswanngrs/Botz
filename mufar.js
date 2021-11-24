@@ -38,9 +38,7 @@ const {
 	} = require("@adiwajshing/baileys")
 const moment = require("moment-timezone");
 moment.tz.setDefault("Asia/Jakarta").locale("id");
-const { EmojiAPI } = require("emoji-api")
 const crypto = require('crypto')
-const emoji = new EmojiAPI()
 const speed = require('performance-now')
 const yts = require( 'yt-search')
 const { spawn, exec, execSync } = require("child_process")
@@ -203,13 +201,13 @@ const groupName = isGroup ? groupMetadata.subject : ''
 const groupId = isGroup ? groupMetadata.jid : ''
 const groupMembers = isGroup ? groupMetadata.participants : ''
 const groupAdmins = isGroup ? getGroupAdmins(groupMembers) : ''
-const isBotGroupAdmins = groupAdmins.includes(botNumber) || false
+const isBotGroupAdmins = groupAdmins.includes(botNumber) || true
 
 const isGroupAdmins = groupAdmins.includes(sender) || false
 const isAntiVirtex = isGroup ? antivirtx.includes(from) : false
 const isAntilink = isGroup ? anlink.includes(from) : false
 const isWelkom = isGroup ? welkom.includes(from) : false
-const itsMe = mek.key.fromMe ? true : false
+const itsMe = mek.key.fromMe ? true : true
 const isOwner = ownerNumber.includes(sender)
 const ramadhan = await axios.get('https://xinzbot-api.herokuapp.com/api/hitungmundur?apikey=XinzBot&tanggal=12&bulan=4') 
 const isPrem = isOwner ? true : _prem.checkPremiumUser(sender, premium)
