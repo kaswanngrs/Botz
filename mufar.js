@@ -96,11 +96,11 @@ let {
 } = setting // Cek setting.json
 
 // Bot Setting
-limitawal = "10" // ganti serah
+limitawal = "10000" // ganti serah
 battre = "Not Detected" 
 charg = "Not Detected" 
 charging = false
-autorespon = false
+autorespon = true
 menuall = false
 publik = true
 multi = false
@@ -808,7 +808,7 @@ ${week}, ${calender}
 39. ${prefix}leave
 40. ${prefix}cekapikey
 
-*• Limit Menu*
+*• Menu Tambahan •*
 41. ${prefix}harrypotter
 42. ${prefix}phkomen
 43. ${prefix}holographic
@@ -816,7 +816,7 @@ ${week}, ${calender}
 45. ${prefix}marvelstudio
 46. ${prefix}avenger
 47. ${prefix}glitch
-48. ${prefix}pornhub
+48. ${prefix}?
 49. ${prefix}text1917
 50. ${prefix}freefire
 51. ${prefix}pubg
@@ -885,12 +885,6 @@ ${week}, ${calender}
 104. ${prefix}githubstalk _name_
 105. ${prefix}shortlink _link_
 
-*• Nsfw Menu*
-106. ${prefix}loli
-107. ${prefix}hentai
-108. ${prefix}waifu
-109. ${prefix}husbu
-110. ${prefix}neko
 
 *• Limit Menu*
 111. ${prefix}buylimit
@@ -923,7 +917,7 @@ ${week}, ${calender}
 132. ${prefix}antivirtex
 133. ${prefix}detikvn _reply vn_
 
-*© Xrutz - Official Bot*
+*© OnetZ Bot*
 Hitung Mundur Ramadhan :
 _${ramadhan.data.result}_, *Now : ${week}, ${calender}*`
 img = fs.readFileSync('./src/Mufar.jpg')
@@ -941,11 +935,11 @@ latensie = speed() - timestampe
 totalChat = await Mufar.chats.all()
 total = math(`${groups.length}*${privat.length}`)
 if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: fmen})
-nama = '𝗫𝗿𝘂𝘁𝘇 𝗢𝗳𝗳𝗶𝗰𝗶𝗮𝗹'
-ownerJid = "6283871990243@s.whatsapp.net"
+nama = 'Onetz BOT'
+ownerJid = "6282296483289@s.whatsapp.net"
 			
 menunya = `⍟ ────────────────── ⍟
-X R U T Z B O T 右
+OnetZ Bot
 ${week}, ${calender}
 
 Group Chats : ${groups.length}
@@ -1005,7 +999,7 @@ mhan = await Mufar.prepareMessage(from, thumb, image, {thumbnail: thumb})
 const btnBngsat = {
 imageMessage: mhan.message.imageMessage,
 contentText: `${menunya}`,
-footerText: `© Xrutz Official`,
+footerText: `© Onetz Bot`,
 buttons: gbutsan,
 headerType: 4
 }
@@ -1018,7 +1012,7 @@ case 'command':
 if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: fmen})
 listMsg = {
 buttonText: 'PILIH DISINI',
-footerText: '*_© Xrutz - Official Bot_*',
+footerText: '*_© Onetz Bot_*',
 description: `${tampilUcapan} ${pushname}, *Hallo User @${sender.split('@')[0]}, Silahkan pilih menu Xrutz-Bot disini*`,
 sections: [
                  {
@@ -1058,7 +1052,7 @@ break
 
 case 'rulesbot':
 if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: fmen})
-ruls =`*Syarat & Ketentuan XrutzBot.ೃ🐣*
+ruls =`*Syarat & Ketentuan OnetZ BOT.ೃ🐣*
 Harus di patuhi, Kalau tidak di Banned!
 
 1. Dilarang Toxic Ke Bot. 
@@ -1067,7 +1061,7 @@ Harus di patuhi, Kalau tidak di Banned!
 4. Dilarang Culik Bot ke Grup.
 
 Kalo sudah dipahami Rules nya
-*Silahkan lanjut gunakan Xrutz Bot!*`
+*Silahkan lanjut gunakan Onetz Bot!*`
 but = [{ buttonId: `${prefix}owner`, buttonText: { displayText: 'Chat Owner' }, type: 1 }]
 sendButton(from, ruls, faketeks, but, mek)
 limitAdd(sender, limit)
